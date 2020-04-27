@@ -1,0 +1,47 @@
+
+
+    <a class="tab" mat-button [routerLink]="'/search'"> 
+      <mat-icon class="icon">query_builder</mat-icon>
+        <span  class="label">Query</span>
+    </a>
+    <a class="tab" mat-button [routerLink]="'/visualize'"> 
+      <mat-icon class="icon">show_chart</mat-icon>
+        <span  class="label">Visualize</span>
+    </a>
+
+  
+    <div *ngIf="articleChart">
+      <canvas id="canvas">{{ articleChart }}</canvas>
+      <br>
+    </div>
+  
+ 
+
+    <div *ngIf="eventChart">
+      <canvas id="eventCanvas">{{ eventChart }}</canvas>
+      <br>
+    </div>
+
+  
+
+    <div *ngIf="cameoChart">
+      <canvas id="cameoCanvas">{{ cameoChart }}</canvas>
+      <br>
+    </div>
+
+ 
+
+    <div *ngIf="actorsChart">
+      <canvas id="actorsCanvas">{{ actorsChart }}</canvas>
+      <br>
+    </div>
+
+
+
+    <div *ngIf="toneChart">
+      <canvas id="toneCanvas">{{ toneChart }}</canvas>
+    </div>
+
+
+
+    

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <div class="container">
+    <br>
+    <br>
+    <h3>Select one value from one category to begin</h3>
+    <br>
+    <br>
+    <div id="otherActor">Other Actor: 
+        <select id="otherActorSelect" [(ngModel)]="actorSelected"(change)='selectUpdate($event)'>
+            <option *ngFor="let actor of countriesList"[value]="actor.code">
+                {{actor.name}}
+            </option>
+        </select>
+    </div>
+      <br>
+      <br>
+    <hr>
+      <br>
+      <br>
+    <div id="pressOrigin">Press Origin: 
+        <select id="pressOriginSelect" [(ngModel)]="originSelected"(change)='selectUpdate($event)'>
+              <option *ngFor="let press of pressList"[value]="press.code">
+                  {{press.name}}
+              </option>
+          </select>
+    </div>
+      <br>
+      <br>
+    <hr>
+      <br>
+      <br>
+    <div id="eventLocation">Event Location: 
+        <select id="eventLocationSelect" [(ngModel)]="locationSelected"(change)='selectUpdate($event)'>
+            <option *ngFor="let location of locationList"[value]="location.code">
+                {{location.name}}
+            </option>
+        </select>
+    </div>
+      <br>
+      <br>
+    <hr>
+      <br>
+      <br>
+    <div id="cameoCode">CAMEO Code: 
+        <select id="cameoCodeSelect" [(ngModel)]="cameoSelected"(change)='selectUpdate($event)'>
+          <option *ngFor="let code of cameoList"[value]="code.number">
+              {{code.description}}
+          </option>
+      </select> 
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a id="searchButton" mat-button [routerLink]="'/search'"> 
+      <mat-icon class="icon">insert_chart_outlin</mat-icon>
+      <span  class="label">Choose Query</span>
+    </a>
+  </div>
+</body>
+</html>
